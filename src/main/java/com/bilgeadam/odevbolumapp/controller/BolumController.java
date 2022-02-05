@@ -41,6 +41,18 @@ public class BolumController {
         return bolumRepository.findAll();
     }
 
+    @GetMapping("/bolumad/{id}")
+    public String getBolumAd(@PathVariable("id") long id)
+    {
+
+
+        Bolum bolum = getBolum(id);
+        return bolum.getAd();
+
+        //return getBolum(id).getAd();
+
+    }
+
 
 
 }
